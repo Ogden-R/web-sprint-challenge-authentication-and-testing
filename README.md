@@ -12,7 +12,7 @@ You are not allowed to collaborate during the sprint challenge.
 
 - [x] Run `npm install` to install your dependencies.
 - [x] Build your database executing `npm run migrate`.
-- [ ] Run tests locally executing `npm test`.
+- [x] Run tests locally executing `npm test`.
 
 ## Project Instructions
 
@@ -28,9 +28,9 @@ We will hash the user's password using `bcryptjs`, and use JSON Web Tokens and t
 
 Your finished project must include all of the following requirements (further instructions are found inside each file):
 
-- [ ] An authentication workflow with functionality for account creation and login, implemented inside `api/auth/auth-router.js`.
-- [ ] Middleware used to restrict access to resources from non-authenticated requests, implemented inside `api/middleware/restricted.js`.
-- [ ] A minimum of 2 tests per API endpoint, written inside `api/server.test.js`.
+- [x] An authentication workflow with functionality for account creation and login, implemented inside `api/auth/auth-router.js`.
+- [x] Middleware used to restrict access to resources from non-authenticated requests, implemented inside `api/middleware/restricted.js`.
+- [x] A minimum of 2 tests per API endpoint, written inside `api/server.test.js`.
 
 **IMPORTANT Notes:**
 
@@ -44,16 +44,23 @@ Your finished project must include all of the following requirements (further in
 
 ## Submission format
 
-- [ ] Submit via Codegrade by pushing commits to your `main` branch on Github.
-- [ ] Check Codegrade before the deadline to compare its results against your local tests.
-- [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
-- [ ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
+- [x] Submit via Codegrade by pushing commits to your `main` branch on Github.
+- [x] Check Codegrade before the deadline to compare its results against your local tests.
+- [x] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
+- [x] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
+    -   sessions are stored server-side and tokens are stored client-side. and tokens are better at handling a large number of clients at a time than sessions.
+
 2. What does `bcryptjs` do to help us store passwords in a secure manner?
+    -   bcrypt uses hashing to encode/encrypt confidential information, such as your password.it makes it nearly impossible to hack into, as you need not onl the hash, but also a 'secret' string held by the server.
+
 3. How are unit tests different from integration and end-to-end testing?
+    -   unit tests focus on single sections of code, like functions, while integration tests test how multiple sections of code interact with each other, or integrate. end to end testing goes through the motions of the UI as if it were actually happening. it tests fron start to finish the path the the user might take to ensure that there are no breaks or errors in the code.
+
 4. How does _Test Driven Development_ change the way we write applications and tests?
+    -   TDD makes it so that you only need to refactor code as needed AFTER you first have created the test, then written the code. it makes it so you dont have to keep going back and forth between everything to make them all match.
